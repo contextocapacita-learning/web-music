@@ -1380,44 +1380,42 @@ nav.desk a:hover::after {
 #media-kit {
   background: var(--navy);
 }
+
 .mk-intro {
   font-size: 0.88rem;
   color: var(--arena-muted);
   max-width: 480px;
   margin-bottom: var(--gap-md);
 }
+
 .mk-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(16px, 2.5vw, 24px);
 }
+
 .mk-item {
   aspect-ratio: 1 / 1;
   cursor: pointer;
   transition: transform var(--dur-fast) var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .mk-item:hover {
   transform: translateY(-3px);
 }
-.mk-item.ph {
-  height: 100%;
-}
-.mk-item:hover.ph {
+
+.mk-item:hover .ph {
   border-color: rgba(91, 141, 239, 0.25);
   color: rgba(91, 141, 239, 0.55);
-}
-.mk-badge {
-  margin-top: 12px;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(232, 220, 198, 0.25);
-  text-align: center;
 }
 
 #contacto {
   background: var(--navy-deep);
 }
+
 #contacto::before {
   content: "";
   position: absolute;

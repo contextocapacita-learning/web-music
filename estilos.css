@@ -1377,31 +1377,16 @@ nav.desk a:hover::after {
   margin-top: 28px;
 }
 
-#media-kit {
-  background: var(--navy);
-}
-
-.mk-intro {
-  font-size: 0.88rem;
-  color: var(--arena-muted);
-  max-width: 480px;
-  margin-bottom: var(--gap-md);
-}
-
-.mk-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
 .mk-item {
-  display: flex; /* Esto hace que el <a> se comporte bien en el grid */
-  aspect-ratio: 1 / 1; /* Mantiene el cuadrado perfecto */
+  display: flex;
+  aspect-ratio: 1 / 1;
   width: 100%;
   cursor: pointer;
-  text-decoration: none; /* Quita subrayados de links */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Para ver el cuadro */
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform var(--dur-fast) var(--ease-out);
+  padding: 0;           /* CAMBIO 1: Asegura que no haya espacio interno */
+  overflow: hidden;     /* CAMBIO 2: Corta la imagen si sobresale del borde */
 }
 
 .mk-item:hover {
@@ -1417,6 +1402,13 @@ nav.desk a:hover::after {
   justify-content: center;
 }
 
+/* CAMBIO 3: Agrega esta regla nueva al final */
+.mk-item .ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Elimina espacios extra que el navegador pone por defecto */
+}
 #contacto {
   background: var(--navy-deep);
 }

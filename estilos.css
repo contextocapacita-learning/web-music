@@ -1383,14 +1383,15 @@ nav.desk a:hover::after {
   width: 100%;
   cursor: pointer;
   text-decoration: none;
+  box-sizing: border-box; /* Mantiene el borde dentro del tamaño */
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform var(--dur-fast) var(--ease-out);
-  padding: 0;           /* CAMBIO 1: Asegura que no haya espacio interno */
-  overflow: hidden;     /* CAMBIO 2: Corta la imagen si sobresale del borde */
+  padding: 0;
+  overflow: hidden;
 }
 
 .mk-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* ¡Aquí recuperamos tu animación! */
   border-color: rgba(91, 141, 239, 0.5);
 }
 
@@ -1398,16 +1399,17 @@ nav.desk a:hover::after {
   width: 100%;
   height: 100%;
   display: flex;
+  margin: 0; 
+  padding: 0;
   align-items: center;
   justify-content: center;
 }
 
-/* CAMBIO 3: Agrega esta regla nueva al final */
 .mk-item .ph img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block; /* Elimina espacios extra que el navegador pone por defecto */
+  object-fit: cover; /* Ajusta la foto sin deformarla */
+  display: block;    /* Elimina el espacio fantasma debajo de la foto */
 }
 #contacto {
   background: var(--navy-deep);

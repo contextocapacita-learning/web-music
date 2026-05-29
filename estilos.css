@@ -1418,7 +1418,9 @@ nav.desk a:hover::after {
   object-position: center;
   display: block;    
 }
-
+.mk-intro {
+  margin-bottom: 40px !important;
+}
 /* --- FIN MEDIA KIT --- */
 
 #contacto::before {

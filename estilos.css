@@ -1418,8 +1418,16 @@ nav.desk a:hover::after {
   object-position: center;
   display: block;    
 }
-.mk-intro {
-  margin-bottom: 40px !important;
+/* Esto asegura que el párrafo tenga espacio debajo, sin importar qué otra clase tenga */
+#media-kit .mk-intro {
+  margin-bottom: 50px !important;
+  display: block;
+}
+
+/* Además, vamos a darle un pequeño margen al contenedor .wrap 
+   para que no esté tan pegado a las fotos */
+#media-kit .wrap {
+  padding-bottom: 20px;
 }
 /* --- FIN MEDIA KIT --- */
 

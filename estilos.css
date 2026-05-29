@@ -1377,21 +1377,30 @@ nav.desk a:hover::after {
   margin-top: 28px;
 }
 
+/* --- INICIO MEDIA KIT --- */
+
+.mk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 24px;
+  width: 100%;
+}
+
 .mk-item {
   display: flex;
-  aspect-ratio: 1 / 1;
   width: 100%;
   cursor: pointer;
   text-decoration: none;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform var(--dur-fast) var(--ease-out);
   padding: 0;
-  overflow: hidden; /* Esto es lo que corta la imagen al tamaño del borde */
+  overflow: hidden;
+  height: 200px; 
 }
 
 .mk-item:hover {
-  transform: translateY(-3px); /* ¡Aquí recuperamos tu animación! */
+  transform: translateY(-3px);
   border-color: rgba(91, 141, 239, 0.5);
 }
 
@@ -1399,18 +1408,18 @@ nav.desk a:hover::after {
   width: 100%;
   height: 100%;
   margin: 0; 
-  padding: 0; /* Asegura que no haya espacio interno */
+  padding: 0;
 }
 
 .mk-item .ph img {
   width: 100%;
   height: 100%;
-  /* CAMBIO: 'contain' hará que la foto se vea completa sin hacer zoom, 
-     aunque pueda dejar un pequeño fondo de color en los lados */
   object-fit: contain; 
   object-position: center;
   display: block;    
 }
+
+/* --- FIN MEDIA KIT --- */
 
 #contacto::before {
   content: "";
